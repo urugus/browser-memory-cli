@@ -1,9 +1,9 @@
-import { runWorkflow } from "./browser-engine.js";
-import { deleteCredential, getCredential, setCredential } from "./credentials.js";
-import { ClaudeCliProvider } from "./llm-provider.js";
-import { setupBrowser } from "./setup-browser.js";
-import { Storage } from "./storage.js";
-import { boolFlag, fail, printJson } from "./utils.js";
+import { runWorkflow } from "./browser-engine";
+import { deleteCredential, getCredential, setCredential } from "./credentials";
+import { ClaudeCliProvider } from "./llm-provider";
+import { setupBrowser } from "./setup-browser";
+import { Storage } from "./storage";
+import { boolFlag, fail, printJson } from "./utils";
 
 export const dispatch = async (args, rawFlags) => {
   const storage = new Storage();

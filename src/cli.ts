@@ -1,5 +1,5 @@
-import { dispatch, printHelp } from "./commands.js";
-import { parseArgs } from "./utils.js";
+import { dispatch, printHelp } from "./commands";
+import { parseArgs } from "./utils";
 
 export const main = async (argv) => {
   const parsed = parseArgs(argv);

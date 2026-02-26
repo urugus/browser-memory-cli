@@ -2,7 +2,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { Storage } from "../src/storage.js";
+import { Storage } from "../src/storage";
 
 describe("storage", () => {
   it("can create workflow and run", () => {

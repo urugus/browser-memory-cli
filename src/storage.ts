@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { ensureDir, genId, homeDir, nowIso, readJson, writeJson } from "./utils.js";
+import { ensureDir, genId, homeDir, nowIso, readJson, writeJson } from "./utils";
 
 export class Storage {
   constructor(baseDir = homeDir()) {

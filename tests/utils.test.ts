@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { boolFlag, parseArgs } from "../src/utils.js";
+import { boolFlag, parseArgs } from "../src/utils";
 
 describe("utils", () => {
   it("parseArgs parses flags and positional args", () => {

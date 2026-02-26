@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { ensureDir, nowIso } from "./utils.js";
+import { ensureDir, nowIso } from "./utils";
 
 export const runWorkflow = async ({ storage, provider, workflow, options }) => {
   const run = storage.createRun(workflow.id, options);
@@ -63,7 +63,7 @@ export const runWorkflow = async ({ storage, provider, workflow, options }) => {
 };
 
 const createRuntime = async ({ headless, downloadDir }) => {
-  let playwright;
+  let playwright = null;
   try {
     playwright = await import("playwright");
   } catch {

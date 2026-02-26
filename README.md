@@ -95,6 +95,12 @@ npm run setup:browser
 
 - `NPM_TOKEN`: npm publish 権限を持つトークン
 
+必要なGitHub設定:
+
+- Repository Settings > Actions > General > Workflow permissions で
+  - `Read and write permissions` を有効化
+  - `Allow GitHub Actions to create and approve pull requests` を有効化（`GITHUB_TOKEN`運用時）
+
 ## 既知の制約
 
 - MCPサーバーは `mcp serve` のスタブのみ実装

@@ -1,0 +1,5 @@
+node_modules/
+.browser-memory/
+coverage/
+dist/
+.DS_Store

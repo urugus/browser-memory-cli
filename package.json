@@ -1,0 +1,29 @@
+{
+  "name": "browser-memory-cli",
+  "version": "0.1.0",
+  "description": "Local browser operation memory CLI for Claude Code",
+  "type": "module",
+  "bin": {
+    "browser-memory": "./bin/browser-memory.js"
+  },
+  "scripts": {
+    "start": "node ./bin/browser-memory.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check ."
+  },
+  "keywords": [
+    "claude",
+    "playwright",
+    "cli",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4",
+    "vitest": "^4.0.18"
+  }
+}

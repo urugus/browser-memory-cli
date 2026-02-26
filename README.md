@@ -82,7 +82,18 @@ browser-memory credential delete vendor_a_password
 npm run format
 npm run lint
 npm run test
+npm run changeset
 ```
+
+## リリース運用（Changesets + GitHub Actions）
+
+- PRで機能変更を入れるときは `npm run changeset` で変更内容を追加
+- `main` へマージ後、`Release` workflow が自動で release PR を作成
+- release PR をマージすると npm publish と `CHANGELOG.md` 更新が自動実行
+
+必要なGitHub Secrets:
+
+- `NPM_TOKEN`: npm publish 権限を持つトークン
 
 ## 既知の制約
 

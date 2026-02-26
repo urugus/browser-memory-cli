@@ -1,6 +1,7 @@
 import { runWorkflow } from "./browser-engine.js";
 import { deleteCredential, getCredential, setCredential } from "./credentials.js";
 import { ClaudeCliProvider } from "./llm-provider.js";
+import { setupBrowser } from "./setup-browser.js";
 import { Storage } from "./storage.js";
 import { boolFlag, fail, printJson } from "./utils.js";
 
@@ -25,6 +26,9 @@ export const dispatch = async (args, rawFlags) => {
   }
   if (args[0] === "credential") {
     return handleCredential(args.slice(1), rawFlags);
+  }
+  if (args[0] === "setup:browser") {
+    return handleSetupBrowser(rawFlags);
   }
   if (args[0] === "mcp" && args[1] === "serve") {
     return serveMcp();
@@ -197,6 +201,12 @@ const handleCredential = (args, flags) => {
   fail("credential subcommand must be set|get|delete");
 };
 
+const handleSetupBrowser = (flags) => {
+  const browser = flags.browser || "chromium";
+  setupBrowser({ browser });
+  return printMaybeJson(flags, { ok: true, browser }, `Playwright browser installed: ${browser}`);
+};
+
 const serveMcp = () => {
   process.stdout.write(
     `${JSON.stringify(
@@ -230,6 +240,7 @@ export const printHelp = () => {
     "  credential set <name> --value <secret>",
     "  credential get <name>",
     "  credential delete <name>",
+    "  setup:browser [--browser chromium|firefox|webkit]",
     "  mcp serve",
     "  add --json to print machine-readable output",
   ];

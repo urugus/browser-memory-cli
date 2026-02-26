@@ -1,6 +1,6 @@
 {
   "name": "browser-memory-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local browser operation memory CLI for Claude Code",
   "type": "module",
   "bin": {

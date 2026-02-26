@@ -93,7 +93,6 @@ npm run setup:browser
 
 必要なGitHub Secrets:
 
-- `CHANGESETS_GITHUB_TOKEN`: `repo` 権限を持つ Personal Access Token（release PR作成用）
 - `NPM_TOKEN`: npm publish 権限を持つトークン
 
 必要なGitHub設定:

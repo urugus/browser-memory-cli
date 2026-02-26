@@ -1,5 +1,11 @@
 # browser-memory-cli
 
+## 0.1.2
+
+### Patch Changes
+
+- 04e7aa7: Add a `setup:browser` CLI command so users can install Playwright browsers without relying on npm scripts.
+
 ## 0.1.1
 
 ### Patch Changes

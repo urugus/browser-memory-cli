@@ -93,7 +93,14 @@ npm run setup:browser
 
 必要なGitHub Secrets:
 
+- `CHANGESETS_GITHUB_TOKEN`: `repo` 権限を持つ Personal Access Token（release PR作成用）
 - `NPM_TOKEN`: npm publish 権限を持つトークン
+
+必要なGitHub設定:
+
+- Repository Settings > Actions > General > Workflow permissions で
+  - `Read and write permissions` を有効化
+  - `Allow GitHub Actions to create and approve pull requests` を有効化（`GITHUB_TOKEN`運用時）
 
 ## 既知の制約
 
